@@ -9,9 +9,21 @@
 			<div id="header">
 				<div id="header-top">
 					<div id="branding">
-						<h2>
-							Michigan State University | <?php bloginfo('description');?>							
-						</h2>
+						<!--
+						<span class="ms">Michigan State</span>
+						<span class="u">University</span>
+						<span class="pipe">|</span>
+						-->
+						<table>
+							<tr>
+								<td class="msu">
+									<img src="<?php echo(get_template_directory_uri()."/img/logo.png");?>"/>
+								</td>
+								<td class="rha">
+									<?php bloginfo('description'); ?>
+								</td>
+							</tr>
+						</table>
 					</div> <!-- #branding -->
 				</div> <!-- #header-top -->
 				<div class="rule"></div>
