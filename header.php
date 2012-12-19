@@ -14,10 +14,14 @@
 						<table>
 							<tr>
 								<td class="msu">
+									<a href="http://msu.edu/">
 									<img src="<?php echo(get_template_directory_uri()."/img/logo.png");?>"/>
+									</a>
 								</td>
 								<td class="rha">
+									<a href="<?php bloginfo('url');?>">
 									<?php bloginfo('description'); ?>
+									</a>
 								</td>
 							</tr>
 						</table>
