@@ -156,7 +156,7 @@ a {
  * 	Posts
  *********************************************************/
 article.post {
-	margin-bottom:15px;
+	margin-bottom:30px;
 }
 
 .post-header {
@@ -166,6 +166,7 @@ article.post {
 
 .post h1.post-title {
 	margin:0;
+	width:100%;
 }
 
 .post .post-title a {
@@ -178,6 +179,8 @@ article.post {
 .post .post-timestamp a {
 	color: #454B4D;
 	font-size:12px;
+	float:right;
+	line-height:30px;
 }
 
 .post .post-content {

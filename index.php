@@ -11,12 +11,12 @@
 							<a href="<?php get_permalink();?>">
 								<?php the_title();?>
 							</a>
+							<span class="post-timestamp">
+								<a href="<?php get_permalink();?>">
+									<?php the_time('F jS, Y');?>
+								</a>
+							</span>
 						</h1>
-						<span class="post-timestamp">
-							<a href="<?php get_permalink();?>">
-								<?php the_time('F jS, Y');?>
-							</a>
-						</span>
 					</header>
 					<div class="post-content">
 						<?php the_excerpt();?>
