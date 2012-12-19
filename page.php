@@ -13,11 +13,6 @@
 							<a href="<?php the_permalink();?>">
 								<?php the_title();?>
 							</a>
-							<span class="post-timestamp">
-								<a href="<?php the_permalink();?>">
-									<?php the_time('F jS, Y');?>
-								</a>
-							</span>
 						</h1>
 					</header>
 					<div class="post-content">
