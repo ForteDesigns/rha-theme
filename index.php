@@ -10,11 +10,11 @@
 						<!-- alignment of timestamp depends
 							 on this h1/span tomfoolery -->
 						<h1 class="post-title">
-							<a href="<?php get_permalink();?>">
+							<a href="<?php the_permalink();?>">
 								<?php the_title();?>
 							</a>
 							<span class="post-timestamp">
-								<a href="<?php get_permalink();?>">
+								<a href="<?php the_permalink();?>">
 									<?php the_time('F jS, Y');?>
 								</a>
 							</span>
@@ -24,7 +24,7 @@
 						<?php the_excerpt();?>
 					</div>
 					<footer class="post-footer">
-						<a class="more" href="<?php get_permalink();?>">
+						<a class="more" href="<?php the_permalink();?>">
 							More info
 						</a>
 					</footer>
