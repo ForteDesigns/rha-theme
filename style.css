@@ -48,10 +48,51 @@ a {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a493e', endColorstr='#0d2620',GradientType=0 );
 }
 
+#masthead #branding {
+	float:left;
+}
+
 #masthead .rha a {
 	color:white;
 	padding-left:15px;
 	font-size:21px;
+}
+
+#masthead #search {
+	height:31px;
+	width:231px;
+	background-image:url('img/search.gif');
+	background-position:0px 0px;
+	float:right;
+}
+
+#masthead form input[type=text] {
+	width:185px;
+	background-color:transparent;
+	border-style:none;
+	font-size:15px;
+	color: #A8AAA3;
+	font-weight:500;
+	float:left;
+	outline:none;
+	padding-top:7px;
+	padding-left:5px;
+}
+
+#masthead form input[type=text]:focus {
+	outline:none;
+}
+
+#masthead #searchsubmit {
+	height:31px;
+	width:35px;
+	background-image: url('img/search.gif');
+	background-position:-196px 0px;
+	display:block;
+	cursor:pointer;
+	outline: 0px none;
+	border: 0pc none;
+	float:right;
 }
 
 #masthead .bottom {
@@ -68,29 +109,42 @@ a {
 }
 
 #masthead nav {
+	font-family:'trebuchet MS', Arial, Helvetica;
 	display:inline-block;
 	vertical-align:top;
 	float:left;
 }
 
+#masthead ul {
+	margin:0;
+	border-right:1px solid #454545;
+}
+
 #masthead nav li {
+	height:50px;
 	display:inline-block;
 	vertical-align:top;
+	border-right: 1px solid #222;
+	border-left: 1px solid #454545;
 }
 
 #masthead nav ul:first-child {
 	padding-left: 0px;
+	border-left: 1px solid #222;
 }
 
 #masthead nav li a {
 	display:inline-block;
 	color:#ddd;
-	font-size:13px;
-	font-weight:300;
+	font-size:1em;
+	font-weight:500;
 	text-transform:uppercase;
 	text-align:center;
     text-shadow: 0 1px 0 #4d1f41;
-    padding: 0px 8px;
+    padding: 0px 10px;
+    line-height:50px;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	letter-spacing:1px;
 }
 
 .shadow {
