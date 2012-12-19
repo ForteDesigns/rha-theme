@@ -7,6 +7,8 @@
 			<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 				<article class="post">
 					<header class="post-header">
+						<!-- alignment of timestamp depends
+							 on this h1/span tomfoolery -->
 						<h1 class="post-title">
 							<a href="<?php get_permalink();?>">
 								<?php the_title();?>
