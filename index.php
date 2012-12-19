@@ -1,63 +1,40 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><?php bloginfo('name');?> | <?php bloginfo('description');?></title>
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-	</head>
-	<body>
-		<div id="wrapper">
-			<div id="header">
-				<div id="header-top">
-					<div id="branding">
-						<!--
-						<span class="ms">Michigan State</span>
-						<span class="u">University</span>
-						<span class="pipe">|</span>
-						-->
-						<table>
-							<tr>
-								<td class="msu">
-									<img src="<?php echo(get_template_directory_uri()."/img/logo.png");?>"/>
-								</td>
-								<td class="rha">
-									<?php bloginfo('description'); ?>
-								</td>
-							</tr>
-						</table>
-					</div> <!-- #branding -->
-				</div> <!-- #header-top -->
-				<div class="rule"></div>
-				<div class="shadow"></div>
-				<div id="header-bottom">
-					<div id="navigation">
-						<div id="nav-menu">
-							<?php wp_nav_menu(array('show_home'=> TRUE));?>
-						</div>
-					</div> <!-- #navigation -->
-				</div> <!-- #header-bottom -->
-			</div> <!-- #header -->
-			<div class="shadow"></div>
-			<div id="content-wrapper">
-				<div id="content">
-					<div id="img-slider">
-						
-					</div> <!-- #img-slider -->
-					<div id="updates-wrapper">
-						<div id="updates">
-							
-						</div> <!-- #updates -->
-						<div id="sidebar">
-							
-						</div> <!-- #sidebar -->
-					</div> <!-- #updates-wrapper -->
-				</div> <!-- #content -->
-			</div> <!-- #content-wrapper --> 
-			<div id="footer">
-				<div id="footer-content-wrapper">
-					<div class="left"></div>
-					<div class="right"></div>
-				</div>			
-			</div> <!-- #footer -->
-		</div> <!-- #wrapper -->
-	</body>
-</html>
+<?php get_header();?>
+
+<div id="main">
+	<div id="slider"></div>
+	<div class="box">
+		<div id="left">
+			<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+				<article class="post">
+					<header class="post-header">
+						<h1 class="post-title">
+							<a href="<?php get_permalink();?>">
+								<?php the_title();?>
+							</a>
+						</h1>
+						<span class="post-timestamp">
+							<a href="<?php get_permalink();?>">
+								<?php the_time('F jS, Y');?>
+							</a>
+						</span>
+					</header>
+					<div class="post-content">
+						<?php the_excerpt();?>
+					</div>
+					<footer class="post-footer">
+						<a class="more" href="<?php get_permalink();?>">
+							More info
+						</a>
+					</footer>
+				</article>
+			<?php endwhile; else : ?>
+				<p><?php _e('No news!');?></p>
+			<?php endif;?>
+		</div>
+		<div id="right">
+			<!-- sidebar here -->
+		</div>
+	</div><!-- .box -->
+</div><!-- #main -->
+
+<?php get_footer();?>
