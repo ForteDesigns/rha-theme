@@ -10,7 +10,7 @@
 						<!-- alignment of timestamp depends
 							 on this h1/span tomfoolery -->
 						<h1 class="post-title">
-							<a href="<?php the_permalink();?>">
+							<a class="unclickable">
 								<?php the_title();?>
 							</a>
 						</h1>
