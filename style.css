@@ -281,3 +281,40 @@ article.post {
 	text-transform:uppercase;
 	color:#1A493E;
 }
+
+/**********************************************************
+ * Executive board
+ *********************************************************/ 
+
+.exec {
+	border: 1px dotted #ddd;
+	width:100%;
+	display:inline-block;
+}
+
+.exec .portrait {
+	padding: 8px;
+	width:144px;
+	float:left;
+}
+
+.exec .info {
+	padding:10px;
+	float:left;
+	width:60%;
+}
+
+.exec img {
+	border: 1px solid #ddd;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+	width:144px;
+}
+
+.exec .name {
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.exec .email {
+	margin-bottom: 10px;
+}
