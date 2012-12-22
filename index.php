@@ -22,7 +22,7 @@
 					</header>
 					<div class="post-content">
 						<div class="left">
-							<div class="dummy"></div>							
+							<div class="dummy"><?php the_post_thumbnail();?></div>							
 						</div>
 						<div class="right">
 							<?php the_excerpt();?>
