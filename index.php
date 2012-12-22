@@ -21,7 +21,12 @@
 						</h1>
 					</header>
 					<div class="post-content">
-						<?php the_excerpt();?>
+						<div class="left">
+							<div class="dummy"></div>							
+						</div>
+						<div class="right">
+							<?php the_excerpt();?>
+						</div>
 					</div>
 					<footer class="post-footer">
 						<a class="more" href="<?php the_permalink();?>">
