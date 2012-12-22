@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html>
 	<head>
 		<title>
@@ -41,6 +41,13 @@
 						<nav>
 							<?php wp_nav_menu(array('show_home'=>TRUE));?>
 						</nav>
+						<div id="social-badges">
+							<div class="swrap">
+								<div class="twitter badge"></div>
+								<div class="facebook badge"></div>
+								<div class="tumblr badge"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="shadow"></div>

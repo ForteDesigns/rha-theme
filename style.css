@@ -14,7 +14,7 @@ html {
 body {
 	margin:0;
 	font-size: 1em;
-	background-color:#ccc;
+	background-color:#111;
 }
 
 a {
@@ -29,7 +29,7 @@ a {
 	z-index: 2;
 }
 
-#masthead .wrap {
+.wrap {
 	max-width:980px;
 	margin: 0 auto;
 }
@@ -178,13 +178,19 @@ a {
     display: box;
 }
 
+#page {
+	background-color: #ccc;
+	padding-bottom:40px;
+	/* border-radius: 0px 0px 20px 20px; */
+	box-shadow: 0 15px 20px rgba(0,0,0,1);
+}
+
 #main {
 	margin: 0 auto;
 	max-width: 980px;
 	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 	background-color: white;
 	border-top:0;
-	margin-bottom: 40px;
 }
 
 #slider {
@@ -223,10 +229,63 @@ a {
 }
 
 /**********************************************************
+ * Main footer 
+ *********************************************************/
+footer {
+	padding-bottom:15px;
+}
+
+footer .site-map header h2 {
+	cursor:default;
+	color: #333;
+	text-shadow: 0px 2px 3px #222;
+	text-transform:uppercase;
+}
+
+footer .site-map ul {
+	list-style:none;
+	padding:0 0 0 10px;
+	border-left: 2px solid #333;
+	margin-left: 5px;
+}
+
+footer .site-map ul li a {
+	color:#333;
+	text-shadow: 0px 1px 2px #222;
+}
+
+footer .site-map ul li a:hover {
+	color:#444;
+}
+
+/**********************************************************
  * 	Posts
  *********************************************************/
 article.post {
 	margin-bottom:30px;
+	display:block;
+}
+
+article.post .post-content {
+	display:inline;
+}
+
+.post-content .left {
+	width:15%;
+	padding-top:15px;
+	float:left;
+}
+
+.post-content .right {
+	width: 70%;
+	min-height:75px;
+	padding-left:100px;
+}
+
+.post-content .left .dummy {
+	width:75px;
+	height:75px;
+	border: 1px dotted #ddd;
 }
 
 .post-header {
@@ -317,4 +376,62 @@ article.post {
 
 .exec .email {
 	margin-bottom: 10px;
+}
+
+/**********************************************************
+ * Social network badges 
+ *********************************************************/
+#social-badges {
+	position:relative;
+	float:right;
+}
+
+#social-badges .swrap {
+	position:absolute;
+	top:-11px;
+	right:36px;
+}
+
+#social-badges .badge {
+	width:53px;
+	height:34px;
+}
+
+#social-badges .facebook {
+	background-image: url('img/isometrica-small-facebook.png');
+	position:absolute;
+	z-index: 20;
+	top:0;
+	right:25px;
+}
+
+#social-badges .facebook:hover {
+	cursor:pointer;
+	top:-2px;
+}
+
+#social-badges .twitter {
+	background-image: url('img/isometrica-small-twitter.png');
+	position:absolute;
+	z-index:40;
+	right:53px;
+	top:17px;
+}
+
+#social-badges .twitter:hover {
+	cursor:pointer;
+	top:15px;
+}
+
+#social-badges .tumblr {
+	background-image: url('img/isometrica-small-tumblr.png');
+	position:absolute;
+	z-index:40;
+	right:0;
+	top:23px;
+}
+
+#social-badges .tumblr:hover {
+	cursor:pointer;
+	top:21px;
 }
