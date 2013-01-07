@@ -22,7 +22,14 @@
 					</header>
 					<div class="post-content">
 						<div class="left">
-							<div class="dummy"><?php the_post_thumbnail();?></div>							
+							<div class="thumb">
+								<?php 
+								if(has_post_thumbnail()) {
+									the_post_thumbnail();
+								} else { ?>
+									<img src="<?php bloginfo('template_directory');?>/img/default_thumb.png" alt="<?php the_title();?>"/>
+								<?php } ?>
+							</div>							
 						</div>
 						<div class="right">
 							<?php the_excerpt();?>
@@ -40,6 +47,7 @@
 		</div>
 		<div id="right">
 			<!-- sidebar here -->
+			<?php get_sidebar();?>
 		</div>
 	</div><!-- .box -->
 </div><!-- #main -->
