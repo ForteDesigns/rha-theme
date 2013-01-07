@@ -35,14 +35,14 @@
 						</from>
 					</div>
 				</div>
-				<div class="shadow"></div>
+				<!-- <div class="shadow"></div> -->
 				<div class="bottom">
 					<div class="wrap">
 						<nav>
 							<?php wp_nav_menu(array('show_home'=>TRUE));?>
 						</nav>
 						<div id="social-badges">
-							<div class="shadow"></div>
+							<!-- <div class="shadow"></div> -->
 							<div class="case">
 								<div class="swrap">
 									<a href="https://twitter.com/MSURHA"><div class="twitter badge"></div></a>
