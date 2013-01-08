@@ -184,12 +184,12 @@ a {
 }
 
 #main {
+	padding-bottom: 330px;
 	margin: 0 auto;
 	max-width: 980px;
 	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 	background-color: white;
 	border-top:0;
-	padding-bottom: 310px;
 	margin-bottom: 20px;
 }
 
