@@ -243,7 +243,7 @@ a {
 footer .top {
 	height: 50px;
 	width:100%;
-	background-color:#333;
+	background-color:#3D3D3D;
 }
 
 footer .site-map header h2 {
@@ -255,7 +255,7 @@ footer .site-map header h2 {
 footer .site-map ul {
 	list-style:none;
 	padding:0 0 0 10px;
-	border-left: 2px solid #333;
+	border-left: 2px solid #3D3D3D;
 	margin-left: 5px;
 }
 
@@ -397,15 +397,29 @@ article.post .post-content {
  *********************************************************/
 #side-banner {
 	width:100%;
-	height:75px;
 	padding-top:10px;
-	margin-bottom:10px;
-	background-color:#333333;
+}
+
+#side-banner .tagline {
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
 }
 
 #side-banner h3 {
 	color: #1A493E;
-	font-size:24px;
+	font-size:18px;
 	font-weight:400;
-	line-height:1.2;
+	margin: 5px auto 5px 20px;
+	text-transform:uppercase;
+}
+
+#social-badges {
+	text-align:center;
+	height:64px;
+	margin-top:-30px;
+}
+
+#social-badges a {
+	height:64px;
+	width:64px;
 }

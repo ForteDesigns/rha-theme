@@ -4,7 +4,9 @@
 		<a href=""><img src="<?php echo(get_template_directory_uri()."/img/facebook.png");?>"/></a>
 		<a href=""><img src="<?php echo(get_template_directory_uri()."/img/tumblr.png");?>"/></a>
 	</div>
-	<h3 class="tagline">Be Social</h3>
+	<div class="tagline">
+		<h3>Be Social</h3>
+	</div>
 </div>
 <div>
 	<style>
