@@ -6,15 +6,14 @@
  *  Author: Kyle Ladd, Nick Zuzow
  */
 
-html {
+html,
+body {
 	font-family: sans-serif;
 	color: #222;
-}
-
-body {
 	margin:0;
 	font-size: 1em;
-	background-color:#111;
+	background-color: #ccc;
+	height:100%;
 }
 
 a {
@@ -176,13 +175,12 @@ a {
     display: -moz-box;
     display: -ms-box;
     display: box;
+    margin-bottom:20px;
 }
 
 #page {
-	background-color: #ccc;
-	padding-bottom:40px;
-	/* border-radius: 0px 0px 20px 20px; */
-	box-shadow: 0 15px 20px rgba(0,0,0,1);
+	min-height:100%;
+	position:relative;
 }
 
 #main {
@@ -191,6 +189,8 @@ a {
 	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 	background-color: white;
 	border-top:0;
+	padding-bottom: 310px;
+	margin-bottom: 20px;
 }
 
 #slider {
@@ -198,9 +198,9 @@ a {
 	/* height: 374px; */
 	height:200px;
 	background-color: rgb(0, 79, 58);
-	background-image: url('img/banner.jpg');
+	background-image: url('img/banner2.jpg');
 	background-repeat:no-repeat;
-	border-bottom: 1px solid #ddd;
+	/* border-bottom: 1px solid #ddd; */
 }
 
 #fake-slider {
@@ -234,15 +234,21 @@ a {
 /**********************************************************
  * Main footer 
  *********************************************************/
-footer {
-	padding-bottom:15px;
-	max-height:150px;
+#footer {
+	background-color:#444;
+	height: 330px;
+	color:#ccc;
+}
+
+footer .top {
+	height: 50px;
+	width:100%;
+	background-color:#333;
 }
 
 footer .site-map header h2 {
 	cursor:default;
-	color: #333;
-	text-shadow: 0px 2px 3px #222;
+	/* text-shadow: 0px 2px 3px #bbb; */	
 	text-transform:uppercase;
 }
 
@@ -254,12 +260,12 @@ footer .site-map ul {
 }
 
 footer .site-map ul li a {
-	color:#333;
-	text-shadow: 0px 1px 2px #222;
+	/* text-shadow: 0px 1px 2px #222; */
+	color: #ccc;
 }
 
 footer .site-map ul li a:hover {
-	color:#444;
+	color:#ddd;
 }
 
 /**********************************************************
@@ -387,102 +393,19 @@ article.post .post-content {
 }
 
 /**********************************************************
- * Social network badges 
+ * Sidebar 
  *********************************************************/
-#social-badges {
-	position:relative;
-	float:right;
-	width:150px;
-	margin-right:10px;
-	font-family: 'trebuchet MS', Arial, Helvetica
+#side-banner {
+	width:100%;
+	height:75px;
+	padding-top:10px;
+	margin-bottom:10px;
+	background-color:#333333;
 }
 
-#social-badges .case {
-	position:absolute;
-	border-radius:0px 0px 10px 10px;
-	background-color: rgba(204, 238, 204, 0.8);
-	top:50px;
-	width:150px;
-	height: 70px;
-	box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-#social-badges .swrap {
-	position:absolute;
-	top:7px;
-	right:23px;
-}
-
-#social-badges .tagline {
-	background: #454b4d;
-	background: -moz-linear-gradient(top, #454b4d 0%, #222 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#454b4d), color-stop(100%,#222));
-	background: -webkit-linear-gradient(top, #444 0%,#202020 100%);
-	background: -o-linear-gradient(top, #454b4d 0%,#222 100%);
-	background: -ms-linear-gradient(top, #454b4d 0%,#222 100%);
-	background: linear-gradient(to bottom, #454b4d 0%,#222 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454b4d', endColorstr='#222',GradientType=0 );
-	border-left:1px solid #222;
-	border-right:1px solid #454545;
-}
-
-#social-badges .tagline h3 {
-	margin:0 auto;
-	line-height:50px;
-	color: #ddd;
-	font-weight:500;
-	text-transform:uppercase;
-	text-align:center;
-	padding: 0px 10px;
-	text-shadow:0 1px 0 rbga(0, 0, 0, 0.5);
-	letter-spacing:1px;
-	pointer:default;
-	font-size:1em;
-	cursor:default;
-	border-right:1px solid #222;
-	border-left:1px solid #454545;
-}
-
-#social-badges .badge {
-	width:53px;
-	height:34px;
-}
-
-#social-badges .facebook {
-	background-image: url('img/isometrica-small-facebook.png');
-	position:absolute;
-	z-index: 20;
-	top:0;
-	right:25px;
-}
-
-#social-badges .facebook:hover {
-	cursor:pointer;
-	top:-2px;
-}
-
-#social-badges .twitter {
-	background-image: url('img/isometrica-small-twitter.png');
-	position:absolute;
-	z-index:40;
-	right:53px;
-	top:17px;
-}
-
-#social-badges .twitter:hover {
-	cursor:pointer;
-	top:15px;
-}
-
-#social-badges .tumblr {
-	background-image: url('img/isometrica-small-tumblr.png');
-	position:absolute;
-	z-index:40;
-	right:0;
-	top:23px;
-}
-
-#social-badges .tumblr:hover {
-	cursor:pointer;
-	top:21px;
+#side-banner h3 {
+	color: #1A493E;
+	font-size:24px;
+	font-weight:400;
+	line-height:1.2;
 }

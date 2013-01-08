@@ -41,19 +41,6 @@
 						<nav>
 							<?php wp_nav_menu(array('show_home'=>TRUE));?>
 						</nav>
-						<div id="social-badges">
-							<!-- <div class="shadow"></div> -->
-							<div class="case">
-								<div class="swrap">
-									<a href="https://twitter.com/MSURHA"><div class="twitter badge"></div></a>
-									<a href="http://www.facebook.com/MSURHA"><div class="facebook badge"></div></a>
-									<div class="tumblr badge"></div>
-								</div>
-							</div>
-							<div class="tagline">
-								<h3>Be social</h3>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="shadow"></div>
