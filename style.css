@@ -417,8 +417,18 @@ article.post .post-content {
 	color:#888;
 }
 
-#showtimes:hover ~ {
-	color:#444;
+#showtimes .ch-head {
+	text-align:center;
+	text-transform:uppercase;
+	color:#1a493e;
+	margin:0 auto;
+	width:100%;
+	float:left;
+	line-height:2;
+}
+
+#showtimes #ch-12 {
+	margin-top:10px;
 }
 
 #showtimes td {

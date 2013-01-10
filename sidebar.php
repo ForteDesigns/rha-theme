@@ -53,7 +53,8 @@
 			<h3>RHA TV</h3>
 		</div>
 		<div id="showtimes">
-			<table>				
+			<span id="ch-11" class="ch-head">Channel 11</span>	
+			<table>
 				<?php
 					global $wpdb;
 					$data = $wpdb->get_results("select * from ScheduleReport where C = '12/1/2012'");
@@ -72,6 +73,25 @@
 						</td>
 					</tr>
 					<?php endforeach ;?>
+				</table>
+				<span id="ch-12" class="ch-head">Channel 12</span>
+				<table>
+					<?php
+					$data = $wpdb->get_results("select * from ScheduleReport2 where C = '12/1/2012'");
+					foreach($data as $info):?>
+					<tr>
+						<?php
+							$start = strtotime($info->D);
+							$playing = (($time-10800) < $start) && ($start < $time);
+						?>
+						<td class="st-left <?php if($playing) _e('now-playing');?>">
+							<?php _e($info->D);?>
+						</td>
+						<td class="st-right <?php if($playing) _e('now-playing');?>">
+							<?php _e($info->F);?>
+						</td>
+					</tr>
+					<?php endforeach;?>
 			</table>
 		</div>
 	</div>
