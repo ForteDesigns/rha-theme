@@ -38,7 +38,7 @@
 				<div class="bottom">
 					<div class="wrap">
 						<nav>
-							<?php wp_nav_menu(array('show_home'=>TRUE));?>
+							<?php wp_nav_menu(array('menu' => 'primary'));?>
 						</nav>
 					</div>
 				</div>

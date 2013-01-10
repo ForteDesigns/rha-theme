@@ -3,7 +3,12 @@
 
 <div id="main">
 	<div class="wrap box">
-		<div id="banner"></div>
+		<div id="banner">
+			<div id="banner-menu">
+				<?php
+				wp_nav_menu(array('theme_location' =>'secondary'));?>
+			</div>
+		</div>
 		<div class="left content">
 			<div class="insulator">
 				<?php if (have_posts()) : while(have_posts()) : the_post();?>
