@@ -188,8 +188,7 @@ nav .menu .menu-item a {
  * 	secondary menu
  */
 #menu-wrapper {
-	background-color:#475;
-	background-color:#282828;
+	background-color:#222;
 	width:20%;
 	height:100%;
 	float:left;
@@ -206,7 +205,7 @@ nav .menu .menu-item a {
 */
 
 #hours-wrapper {
-	background-color:#282828;
+	background-color:#222;
 	width:20%;
 	height:100%;
 	float:left;
@@ -218,7 +217,7 @@ nav .menu .menu-item a {
 	height:100%;
 	/* -webkit-box-shadow: 0px -3px 9px 3px #000; */
 	/* background-color:rgb(0, 79, 58); */
-	background-color:#888;
+	background-color:#ddd;
 }
 
 #banner-menu {
@@ -410,6 +409,33 @@ article.post .post-content {
 #social-badges a {
 	height:64px;
 	width:64px;
+}
+
+#showtimes {
+	font-size:14px;
+	padding:10px;
+	color:#888;
+}
+
+#showtimes:hover ~ {
+	color:#444;
+}
+
+#showtimes td {
+	padding:4px;
+}
+
+#showtimes .now-playing {
+	color:#222;
+	font-weight:bold;
+}
+
+#showtimes .st-left {
+	text-align:right;
+}
+
+#showtimes .st-right {
+	text-align:left;
 }
 
 /**********************************************************
