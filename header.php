@@ -6,8 +6,8 @@
 		</title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url');?>" />
 	</head>
-	<body class="home">
-		<div id="page">
+	<body>
+		<div id="container">
 			<header id="masthead">
 				<div class="top">
 					<div class="wrap">
@@ -35,7 +35,6 @@
 						</from>
 					</div>
 				</div>
-				<!-- <div class="shadow"></div> -->
 				<div class="bottom">
 					<div class="wrap">
 						<nav>

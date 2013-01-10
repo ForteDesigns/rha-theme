@@ -2,37 +2,58 @@
  * 	Theme Name: RHA Theme
  *  Theme URI: http://rha.msu.edu/
  *  Description: MSU RHA Wordpress Theme
- *  Version: 1.0
+ *  Version: 2.0
  *  Author: Kyle Ladd, Nick Zuzow
  */
 
-html,
-body {
-	font-family: sans-serif;
-	color: #222;
+* {
 	margin:0;
-	font-size: 1em;
-	background-color: #ccc;
+	padding:0;
+}
+
+html, body {
 	height:100%;
+	
+	font-family:sans-serif;
+	color:#222;
+	font-size:1em;
+}
+
+body {
+	background-color:#ddd;
 }
 
 a {
 	text-decoration:none;
+	color:#1a493e;
 }
 
 /**********************************************************
- * 	Header/Masthead
+ * Don't touch 
  *********************************************************/
-#masthead {
-	position:relative;
-	z-index: 2;
+#container {
+	min-height:100%;
+}
+
+#main {
+	overflow:auto;
+	/* must be same height as footer */
+	padding-bottom:220px;
 }
 
 .wrap {
-	max-width:980px;
+	width:980px;
 	margin: 0 auto;
+	overflow:hidden;
 }
 
+.clearfix {
+	clear:both;
+}
+
+/**********************************************************
+ * Header
+ *********************************************************/
 #masthead .top {
 	height: 95px;
 	padding-top: 40px;
@@ -55,6 +76,14 @@ a {
 	color:white;
 	padding-left:15px;
 	font-size:21px;
+}
+
+#masthead #search {
+	height:31px;
+	width:231px;
+	background-image:url('img/search.gif');
+	background-position:0px 0px;
+	float:right;
 }
 
 #masthead #search {
@@ -168,34 +197,10 @@ a {
 }
 
 /**********************************************************
- * 	Main content
+ * Content area 
  *********************************************************/
-.box {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-box;
-    display: box;
-    margin-bottom:20px;
-}
-
-#page {
-	min-height:100%;
-	position:relative;
-}
-
-#main {
-	padding-bottom: 330px;
-	margin: 0 auto;
-	max-width: 980px;
-	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-	background-color: white;
-	border-top:0;
-	margin-bottom: 40px;
-}
-
-#slider {
+#banner {
 	width:100%;
-	/* height: 374px; */
 	height:200px;
 	background-color: rgb(0, 79, 58);
 	background-image: url('img/banner2.jpg');
@@ -203,101 +208,67 @@ a {
 	/* border-bottom: 1px solid #ddd; */
 }
 
-#fake-slider {
+#fake-banner {
 	width:100%;
-	height: 1px;
+	height:25px;
 }
 
-#left {
-	-webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -ms-box-flex: 1;
-    box-flex: 1;
-   
-    border-right: 1px solid #ddd;
-   
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    
-    padding:30px;
+#main .content {
+	/* hack columns to be the same height */
+	/* increase these values for resolutions over nine thousand */
+	padding-bottom:9001px;
+	margin-bottom:-9001px;
 }
 
-#right {
-    width: 326px;
-    max-width: 326px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+#main .left {
+	float:left;
+	width:652px;
+	border-right:1px solid #ddd;
+}
+
+#main .left .insulator {
+	padding:30px;
+}
+
+#main .right {
+	float:right;
+	width:327px;
+}
+
+#main .box {
+	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+	background:white;
 }
 
 /**********************************************************
- * Main footer 
- *********************************************************/
-#footer {
-	background-color:#444;
-	height: 330px;
-	color:#ccc;
-}
-
-footer .top {
-	height: 50px;
-	width:100%;
-	background-color:#3D3D3D;
-}
-
-footer .site-map header h2 {
-	cursor:default;
-	/* text-shadow: 0px 2px 3px #bbb; */	
-	text-transform:uppercase;
-}
-
-footer .site-map ul {
-	list-style:none;
-	padding:0 0 0 10px;
-	border-left: 2px solid #3D3D3D;
-	margin-left: 5px;
-}
-
-footer .site-map ul li a {
-	/* text-shadow: 0px 1px 2px #222; */
-	color: #ccc;
-}
-
-footer .site-map ul li a:hover {
-	color:#ddd;
-}
-
-/**********************************************************
- * 	Posts
+ * Posts 
  *********************************************************/
 article.post {
 	margin-bottom:30px;
 	display:block;
+	clear:both;
 }
 
 article.post .post-content {
 	display:inline;
 }
 
-.post-content .left {
+.post-content .post-left {
 	width:15%;
-	padding-top:15px;
 	float:left;
 }
 
-.post-content .right {
-	width: 70%;
+.post-content .post-right {
 	min-height:75px;
 	padding-left:100px;
 }
 
-.post-content .left .thumb {
+.post-content .post-left .thumb {
 	width:75px;
 	height:75px;
 }
 
-.post-content .left .thumb img {
+.post-content .post-left .thumb img {
 	margin:0;
 	padding:0;
 }
@@ -308,7 +279,7 @@ article.post .post-content {
 }
 
 .post h1.post-title {
-	margin:0;
+	margin-bottom:10px;
 	width:100%;
 }
 
@@ -343,6 +314,7 @@ article.post .post-content {
 }
 
 .post-footer {
+	clear:both;
 	border-top:1px dotted #ddd;
 	border-bottom:1px dotted #ddd;
 	padding:5px 0px;
@@ -353,43 +325,6 @@ article.post .post-content {
 	font-size:14px;
 	text-transform:uppercase;
 	color:#1A493E;
-}
-
-/**********************************************************
- * Executive board
- *********************************************************/ 
-
-.exec {
-	border: 1px dotted #ddd;
-	width:100%;
-	display:inline-block;
-}
-
-.exec .portrait {
-	padding: 8px;
-	width:144px;
-	float:left;
-}
-
-.exec .info {
-	padding:10px;
-	float:left;
-	width:60%;
-}
-
-.exec img {
-	border: 1px solid #ddd;
-	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-	width:144px;
-}
-
-.exec .name {
-	text-transform:uppercase;
-	font-weight:bold;
-}
-
-.exec .email {
-	margin-bottom: 10px;
 }
 
 /**********************************************************
@@ -423,3 +358,85 @@ article.post .post-content {
 	height:64px;
 	width:64px;
 }
+
+/**********************************************************
+ * Footer
+ *********************************************************/
+#footer {
+	position:relative;
+	/* negative of height */
+	margin-top:-180px;
+	height:180px;
+	clear:both;
+	
+	background-color:#333;
+}
+
+#footer .top {
+	height:35px;
+	background-color:#2c2c2c;
+	margin-bottom:10px;
+}
+
+#footer .site-map header h2 {
+	cursor:default;
+	text-transform:uppercase;
+	font-size:18px;
+	color:#aaa;
+	font-weight:400;
+	line-height:24px;
+}
+
+#footer .site-map ul {
+	list-style:none;
+	padding:0 0 0 10px;
+	border-left: 2px solid #2c2c2c;
+	margin-left: 5px;
+}
+
+#footer .site-map ul li a {
+	color: #aaa;
+}
+
+#footer .site-map ul li a:hover {
+	color:#ddd;
+}
+
+/**********************************************************
+ * MISC
+ **********************************************************
+ * Executive board
+ *********************************************************/ 
+.exec {
+	width:100%;
+	display:inline-block;
+	margin-bottom:5px;
+}
+
+.exec .portrait {
+	padding: 8px;
+	width:144px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+	border-radius: 2px;
+	float:left;
+}
+
+.exec .info {
+	padding:10px;
+	float:left;
+	width:60%;
+}
+
+.exec img {
+	width:144px;
+}
+
+.exec .name {
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.exec .email {
+	margin-bottom: 10px;
+}
+
