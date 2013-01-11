@@ -16,7 +16,7 @@
 							<table>
 								<tr>
 									<td class="msu">
-										<a href="http://msu.edu/">
+										<a href="http://msu.edu/" target="_blank" alt="Michigan State University">
 										<img src="<?php echo(get_template_directory_uri()."/img/logo.png");?>"/>
 										</a>
 									</td>
