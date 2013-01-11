@@ -1,7 +1,7 @@
 <div id="side-banner">
 	<div id="social-badges">
-		<a href=""><img src="<?php echo(get_template_directory_uri()."/img/twitter.png");?>"/></a>
-		<a href=""><img src="<?php echo(get_template_directory_uri()."/img/facebook.png");?>"/></a>
+		<a href="https://twitter.com/MSURHA" target="_blank" alt="@MSURHA"><img src="<?php echo(get_template_directory_uri()."/img/twitter.png");?>"/></a>
+		<a href="http://www.facebook.com/MSURHA" target="_blank" alt="MSURHA - Facebook"><img src="<?php echo(get_template_directory_uri()."/img/facebook.png");?>"/></a>
 		<a href=""><img src="<?php echo(get_template_directory_uri()."/img/tumblr.png");?>"/></a>
 	</div>
 	<div class="tagline">
