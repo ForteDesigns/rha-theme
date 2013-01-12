@@ -57,7 +57,8 @@
 			<table>
 				<?php
 					global $wpdb;
-					$data = $wpdb->get_results("select * from ScheduleReport where C = '12/1/2012'");
+					$query = "select * from ScheduleReport where C = '".date("n/j/Y")."'";
+					$data = $wpdb->get_results($query);
 					$time = time();
 					foreach($data as $info):?>
 					<tr>
@@ -77,7 +78,8 @@
 				<span id="ch-12" class="ch-head">Channel 12</span>
 				<table>
 					<?php
-					$data = $wpdb->get_results("select * from ScheduleReport2 where C = '12/1/2012'");
+					$query = "select * from ScheduleReport2 where C = '".date("n/j/Y")."'";
+					$data = $wpdb->get_results($query);
 					foreach($data as $info):?>
 					<tr>
 						<?php
