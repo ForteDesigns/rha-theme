@@ -3,7 +3,7 @@
 <div id="main">
 	<div class="wrap box">
 		<div id="fake-banner"></div>
-		<div class="left content">
+		<div class="left content page">
 			<div class="insulator">
 				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 					<article class="post">

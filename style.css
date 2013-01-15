@@ -28,9 +28,17 @@ a {
 	color:#1a493e;
 }
 
+.page a:hover {
+	text-decoration: underline;
+}
+
 h1,h2,h3{
 	color:#1a493e;
 	font-weight:400;
+}
+
+a.unclickable:hover {
+	text-decoration: none;
 }
 
 /**********************************************************
@@ -370,11 +378,6 @@ article.post .post-content {
 
 .post .post-timestamp a:hover {
 	text-decoration:underline;
-}
-
-.post .unclickable {
-	cursor:default;
-	text-decoration:none;
 }
 
 .post .post-content {
