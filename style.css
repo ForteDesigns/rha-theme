@@ -17,6 +17,8 @@ html, body {
 	font-family:sans-serif;
 	color:#222;
 	font-size:1em;
+	
+	min-width:980px;
 }
 
 body {
@@ -271,6 +273,7 @@ nav .menu .menu-item a {
 	margin-bottom:-8px;
 	position:absolute;
 	left:0;
+	min-width:980px;
 }
 
 /**********************************************************
