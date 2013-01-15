@@ -54,7 +54,7 @@
 						</footer>
 					</article>
 				<?php endwhile; else :?>
-					<p><?php _e('No news!');?></p>	
+					<p><?php _e('<h1 id="no-news">No news to display!</h1>');?></p>	
 				<?php endif;?>
 			</div>
 		</div>

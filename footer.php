@@ -22,6 +22,16 @@
 						<li><a href="/admin">Employment</a></li>
 					</ul>
 				</div>
+				<div id="contact-us">
+					<header>
+						<h2>Contact us</h2>
+					</header>
+					<ul>
+						<li>G-7 Holden Hall</li>
+						<li>(517) 355-8285</li>
+						<li><a href="<?php bloginfo('url');?>">rha.msu.edu</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="copyright">
 			</div>

@@ -489,9 +489,10 @@ article.post .post-content {
 
 #footer #site-map, 
 #footer #links,
-#footer #opportunities {
+#footer #opportunities,
+#footer #contact-us {
 	float:left;
-	width:33%; /* 1/(number of cols) */
+	width:25%; /* 1/(number of cols) */
 }
 
 #footer header h2 {
@@ -508,6 +509,7 @@ article.post .post-content {
 	padding:0 0 0 10px;
 	border-left: 2px solid #2c2c2c;
 	margin-left: 5px;
+	color: #aaa;
 }
 
 #footer ul li a {
