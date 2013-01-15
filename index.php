@@ -10,11 +10,7 @@
 					<?php
 					wp_nav_menu(array('theme_location' =>'secondary'));?>
 				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div id="hours-wrapper">
 				<div id="separator-2"></div>
-				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
