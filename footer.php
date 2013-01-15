@@ -12,6 +12,9 @@
 					<header>
 						<h2>Links</h2>
 					</header>
+					<div style="display:none;">
+						<?php wp_nav_menu(array('menu' => 'secondary'));?>
+					</div>
 					<?php wp_nav_menu(array('menu' => 'secondary'));?>
 				</div>
 				<div id="opportunities">
