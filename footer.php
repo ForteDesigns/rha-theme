@@ -27,7 +27,9 @@
 						<h2>Contact us</h2>
 					</header>
 					<ul>
-						<li>G-7 Holden Hall</li>
+						<li>Holden Hall – 234 Wilson Road</li>
+						<li>Room G-7</li>
+						<li>East Lansing, MI 48825</li>
 						<li>(517) 355-8285</li>
 						<li><a href="<?php bloginfo('url');?>">rha.msu.edu</a></li>
 					</ul>
