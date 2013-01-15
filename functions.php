@@ -32,7 +32,7 @@ function new_trim_excerpt($text) {
                 $words = explode(' ', $text, $excerpt_length + 1);
                 if (count($words)> $excerpt_length) {
                         array_pop($words);
-                        array_push($words, '</a><a>ID) . '">Read the Rest...</a>');
+                        array_push($words, '</a><a>ID)' . '">Read the Rest...</a>');
                         $text = implode(' ', $words);
                 }
         }
