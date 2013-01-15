@@ -5,11 +5,11 @@
 	<div class="wrap box">
 		<div id="banner">
 			<div id="menu-wrapper">
+				<div id="separator-1"></div>
 				<div id="banner-menu">
 					<?php
 					wp_nav_menu(array('theme_location' =>'secondary'));?>
 				</div>
-				<div id="separator-1"></div>
 				<div class="clearfix"></div>
 			</div>
 			<div id="hours-wrapper">
