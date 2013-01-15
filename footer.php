@@ -14,6 +14,14 @@
 					</header>
 					<?php wp_nav_menu(array('menu' => 'secondary'));?>
 				</div>
+				<div id="opportunities">
+					<header>
+						<h2>Opportunities</h2>
+					</header>
+					<ul>
+						<li><a href="/admin">Employment</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="copyright">
 			</div>

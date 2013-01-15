@@ -51,7 +51,7 @@ a.unclickable:hover {
 #main {
 	overflow:auto;
 	/* must be same height as footer */
-	padding-bottom:220px;
+	padding-bottom:250px;
 }
 
 .wrap {
@@ -473,8 +473,8 @@ article.post .post-content {
 #footer {
 	position:relative;
 	/* negative of height */
-	margin-top:-180px;
-	height:180px;
+	margin-top:-210px;
+	height:210px;
 	clear:both;
 	
 	background-color:#333;
@@ -486,13 +486,14 @@ article.post .post-content {
 	margin-bottom:10px;
 }
 
-#footer #site-map, #footer #links {
+#footer #site-map, 
+#footer #links,
+#footer #opportunities {
 	float:left;
-	width:50%; /* 1/(number of cols) */
+	width:33%; /* 1/(number of cols) */
 }
 
-#footer #site-map header h2,
-#footer #links header h2 {
+#footer header h2 {
 	cursor:default;
 	text-transform:uppercase;
 	font-size:18px;
