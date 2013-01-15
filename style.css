@@ -256,6 +256,7 @@ nav .menu .menu-item a {
 #menu-secondary .menu-item a {
 	color:#ddd;
 	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	line-height:1.4;
 }
 
 #menu-secondary .menu-item a:hover {
