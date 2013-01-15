@@ -52,6 +52,12 @@ h1,h2,h3{
 	overflow:hidden;
 }
 
+.separator {
+	height:1px;
+	width:100%;
+	background-color:#ddd;
+}
+
 .clearfix {
 	clear:both;
 }
