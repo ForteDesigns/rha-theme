@@ -334,6 +334,10 @@ article.post .post-content {
 	display:inline;
 }
 
+.post-content a:hover {
+	text-decoration:underline;
+}
+
 .post-content .post-left {
 	width:15%;
 	float:left;
@@ -342,6 +346,7 @@ article.post .post-content {
 .post-content .post-right {
 	min-height:75px;
 	padding-left:100px;
+	padding-bottom:8px;
 }
 
 .post-content .post-left .thumb {
