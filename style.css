@@ -30,7 +30,8 @@ a {
 	color:#1a493e;
 }
 
-.page a:hover {
+.page a:hover,
+.single a:hover {
 	text-decoration: underline;
 }
 
