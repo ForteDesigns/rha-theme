@@ -334,7 +334,7 @@ article.post .post-content {
 	display:inline;
 }
 
-.post-content a:hover {
+article.post .post-content a:hover {
 	text-decoration:underline;
 }
 
