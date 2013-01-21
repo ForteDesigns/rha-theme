@@ -5,16 +5,12 @@
 	<div class="wrap box">
 		<div id="banner">
 			<div id="menu-wrapper">
+				<div id="separator-1"></div>
 				<div id="banner-menu">
 					<?php
 					wp_nav_menu(array('theme_location' =>'secondary'));?>
 				</div>
-				<div id="separator-1"></div>
-				<div class="clearfix"></div>
-			</div>
-			<div id="hours-wrapper">
 				<div id="separator-2"></div>
-				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -58,7 +54,7 @@
 						</footer>
 					</article>
 				<?php endwhile; else :?>
-					<p><?php _e('No news!');?></p>	
+					<p><?php _e('<h1 id="no-news">No news to display!</h1>');?></p>	
 				<?php endif;?>
 			</div>
 		</div>

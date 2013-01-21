@@ -17,6 +17,8 @@ html, body {
 	font-family:sans-serif;
 	color:#222;
 	font-size:1em;
+	
+	min-width:980px;
 }
 
 body {
@@ -26,6 +28,20 @@ body {
 a {
 	text-decoration:none;
 	color:#1a493e;
+}
+
+.page a:hover,
+.single a:hover {
+	text-decoration: underline;
+}
+
+h1,h2,h3{
+	color:#1a493e;
+	font-weight:400;
+}
+
+a.unclickable:hover {
+	text-decoration: none;
 }
 
 /**********************************************************
@@ -38,13 +54,20 @@ a {
 #main {
 	overflow:auto;
 	/* must be same height as footer */
-	padding-bottom:220px;
+	padding-bottom:250px;
 }
 
 .wrap {
 	width:980px;
 	margin: 0 auto;
 	overflow:hidden;
+}
+
+.separator {
+	height:1px;
+	width:100%;
+	background-color:#ddd;
+	margin-bottom: 15px;
 }
 
 .clearfix {
@@ -189,34 +212,29 @@ nav .menu .menu-item a {
  */
 #menu-wrapper {
 	background-color:#222;
-	width:20%;
+	background-color: #0D2620;
+	width:40%;
 	height:199px;
 	float:left;
 	border-bottom: 1px solid black;
-}
-
-/*
-#separator-1 {
-	float:right;
-	width:10%;
-	height:100%;
-	background-color:#364;
-	background-color:#282828;
-}
-*/
-
-#hours-wrapper {
-	background-color:#222;
-	width:20%;
-	height:199px;
-	float:left;
+	border-left:1px solid black;
 	border-right:1px solid black;
-	border-bottom: 1px solid black;
+	margin-left:10%;
 }
 
 #hours {
 	padding:25px;
 	color:#ddd;
+}
+
+#separator-1 {
+	float:left;
+	width:1px;
+	height:100%;
+	/* -webkit-box-shadow: 0px -3px 9px 3px #000; */
+	/* background-color:rgb(0, 79, 58); */
+	background-color:#444;
+	border-right:1px solid black;
 }
 
 #separator-2 {
@@ -241,6 +259,7 @@ nav .menu .menu-item a {
 #menu-secondary .menu-item a {
 	color:#ddd;
 	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	line-height:1.4;
 }
 
 #menu-secondary .menu-item a:hover {
@@ -255,6 +274,7 @@ nav .menu .menu-item a {
 	margin-bottom:-8px;
 	position:absolute;
 	left:0;
+	min-width:980px;
 }
 
 /**********************************************************
@@ -314,6 +334,10 @@ article.post .post-content {
 	display:inline;
 }
 
+article.post .post-content a:hover {
+	text-decoration:underline;
+}
+
 .post-content .post-left {
 	width:15%;
 	float:left;
@@ -322,6 +346,7 @@ article.post .post-content {
 .post-content .post-right {
 	min-height:75px;
 	padding-left:100px;
+	padding-bottom:8px;
 }
 
 .post-content .post-left .thumb {
@@ -363,11 +388,6 @@ article.post .post-content {
 
 .post .post-timestamp a:hover {
 	text-decoration:underline;
-}
-
-.post .unclickable {
-	cursor:default;
-	text-decoration:none;
 }
 
 .post .post-content {
@@ -463,8 +483,8 @@ article.post .post-content {
 #footer {
 	position:relative;
 	/* negative of height */
-	margin-top:-180px;
-	height:180px;
+	margin-top:-210px;
+	height:210px;
 	clear:both;
 	
 	background-color:#333;
@@ -476,13 +496,15 @@ article.post .post-content {
 	margin-bottom:10px;
 }
 
-#footer #site-map, #footer #links {
+#footer #site-map, 
+#footer #links,
+#footer #opportunities,
+#footer #contact-us {
 	float:left;
-	width:50%; /* 1/(number of cols) */
+	width:25%; /* 1/(number of cols) */
 }
 
-#footer #site-map header h2,
-#footer #links header h2 {
+#footer header h2 {
 	cursor:default;
 	text-transform:uppercase;
 	font-size:18px;
@@ -496,6 +518,7 @@ article.post .post-content {
 	padding:0 0 0 10px;
 	border-left: 2px solid #2c2c2c;
 	margin-left: 5px;
+	color: #aaa;
 }
 
 #footer ul li a {

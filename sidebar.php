@@ -50,7 +50,7 @@
 	</div>
 	<div id="rha-tv">
 		<div class="tagline">
-			<h3>RHA TV</h3>
+			<h3><a href="<?php bloginfo('url');?>/rha-tv">RHA TV</a></h3>
 		</div>
 		<div id="showtimes">
 			<span id="ch-11" class="ch-head">Channel 11</span>	
