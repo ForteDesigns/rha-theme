@@ -46,9 +46,9 @@ function new_wp_trim_excerpt($text) {
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'new_wp_trim_excerpt');
 
-/**
+/*
  * Exclude pages from search results
- */
+ *
 function SearchFilter($query) {
 	if ($query->is_search) {
 		$query->set('post_type', 'post');
@@ -56,3 +56,4 @@ function SearchFilter($query) {
 	return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
+*/

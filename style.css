@@ -2,7 +2,7 @@
  * 	Theme Name: RHA Theme
  *  Theme URI: http://rha.msu.edu/
  *  Description: MSU RHA Wordpress Theme
- *  Version: 2.0
+ *  Version: 2.0.1
  *  Author: Kyle Ladd, Nick Zuzow
  */
 
@@ -35,7 +35,7 @@ a {
 	text-decoration: underline;
 }
 
-h1,h2,h3{
+h1,h2,h3, h4 {
 	color:#1a493e;
 	font-weight:400;
 }
@@ -567,3 +567,10 @@ article.post .post-content a:hover {
 	margin-bottom: 10px;
 }
 
+/**********************************************************
+ * Search results
+ *********************************************************/
+h4.search-results {
+	margin-bottom: 10px;
+	font-weight:700;
+}

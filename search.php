@@ -16,7 +16,9 @@
 		</div>
 		<div class="left content">
 			<div class="insulator">
-				<?php if (have_posts()) : while(have_posts()) : the_post();?>
+				<?php if (have_posts()) : ?>
+				<h4 class="search-results"><?php _e('Search results for \'' . get_search_query() . '\'');?></h4>
+				<?php while(have_posts()) : the_post();?>
 					<article class="post">
 						<header class="post-header">
 							<!-- alignment of timestamp depends
@@ -54,7 +56,7 @@
 						</footer>
 					</article>
 				<?php endwhile; else :?>
-					<p><?php _e('<h1 id="no-results">No results to display!</h1>');?></p>	
+					<p><?php _e('<h1 id="no-results">No results to display</h1>');?></p>	
 				<?php endif;?>
 			</div>
 		</div>
