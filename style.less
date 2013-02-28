@@ -6,5 +6,521 @@
  *  Author: Kyle Ladd, Nick Zuzow
  */
 
-@import url('css/bootstrap.min.css');
-@import url('css/bootstrap-responsive.min.css');
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.transition(@duration: 0.2s) {
+	-moz-transition-duration: @duration;
+	-webkit-transition-duration: @duration;
+	-o-transition-duration: @duration;
+	transition-duration: @duration;
+}
+
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+@footer-height: 250px;
+
+@rha-green: #1A493E;
+@msu-green: #0D2620;
+@rha-grey: #454B4D;
+
+*, html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #eee;
+	color: #222;
+	height:100%;
+	min-width: 980px;
+	font-size: 1em;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: @rha-green;
+}
+
+h1, h2, h3, h4 {
+	color: @rha-green;
+}
+
+.wrap {
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.shadow {
+	width:100%;
+	background-image: url('img/shadow.png');
+	background-repeat: repeat-x;
+	height:8px;
+	margin-bottom:-8px;
+	position:absolute;
+	left:0;
+	min-width:980px;
+}
+
+#container {
+	min-height: 100%;
+
+	#main {
+		overflow: auto;
+		padding-bottom: @footer-height;
+
+		.content {
+			padding-bottom:9001px;
+			margin-bottom:-9001px;
+		}
+
+		.left {
+			float:left;
+			width:652px;
+			border-right:1px solid #ddd;
+
+			.insulator {
+				padding:30px;
+			}
+		}
+
+		.right {
+			float:right;
+			width:327px;
+		}
+
+		.box {
+			box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+			background:white;
+		}
+	}
+}
+
+#masthead {
+	.top {
+		height: 95px;
+		padding-top: 40px;
+		.gradient(@rha-green, @msu-green);
+	}
+
+	.bottom {
+		height: 50px;
+		.gradient(@rha-grey, #222);
+	}
+
+	#branding {
+		float:left;
+	}
+
+	.rha {
+		a {
+			color: white;
+			padding-left: 15px;
+			font-size:21px;
+		}
+	}
+
+	#search {
+		height:31px;
+		width:231px;
+		background-image:url('img/search.gif');
+		background-position:0px 0px;
+		float:right;
+
+		#searchsubmit {
+			height:31px;
+			width:35px;
+			background-image: url('img/search.gif');
+			background-position:-196px 0px;
+			display:block;
+			cursor:pointer;
+			outline: 0px none;
+			border: 0pc none;
+			float:right;
+		}
+	}
+
+	form input[type=text] {
+		width:185px;
+		background-color:transparent;
+		border-style:none;
+		font-size:15px;
+		color: #A8AAA3;
+		font-weight:500;
+		float:left;
+		outline:none;
+		padding-top:7px;
+		padding-left:5px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+nav {
+	.menu {
+		list-style:none;
+		display:inline-block;
+		border-right:1px solid #454545;
+
+		&:first-child {
+			border-left: 1px solid #222;
+		}
+
+		.menu-item {
+			float:left;
+			height:50px;
+			
+			border-right: 1px solid #222;
+			border-left: 1px solid #454545;
+
+			.transition;
+			&:hover {
+				background: #282828;
+			}
+
+			a {
+				display:block;
+
+				font-size:1em;
+				font-weight:400;
+				text-transform: uppercase;
+				text-align:center;
+				text-shadow: 0 1px 0 rgba(0,0,0,.5);
+				letter-spacing:1px;
+				color:#ddd;
+
+				line-height:50px;
+
+				padding:0 10px;
+			}
+		}
+	}
+}
+
+#menu-wrapper {
+	background-color:#222;
+	background-color: #0D2620;
+	width:40%;
+	height:199px;
+	float:left;
+	border-bottom: 1px solid black;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	margin-left:10%;
+
+	#hours {
+		padding:25px;
+		color:#ddd;
+	}
+
+	#separator-1 {
+		float:left;
+		width:1px;
+		height:100%;
+		background: #444;
+		border-right:1px solid black;
+	}
+
+	#separator-2 {
+		float:right;
+		width:1px;
+		height:100%;
+		background-color:#444;
+		border-left:1px solid black;
+	}
+
+	#banner-menu {
+		float:left;
+		padding:25px;
+	}
+
+	#menu-secondary {
+		list-style:none;
+
+		.menu-item {
+			a {
+				color: #ddd;
+				text-shadow: 0 1px 0 rbga(0,0,0,0.5);
+				line-height: 1.4;
+
+				.transition;
+
+				&:hover {
+					color:white;
+					font-size: 1.3em;
+				}
+			}
+		}
+	}
+}
+
+#banner {
+	width:100%;
+	height:200px;
+	background-color: rgb(0, 79, 58);
+	background-image: url('img/banner2.jpg');
+	background-repeat:no-repeat;
+}
+
+#fake-banner {
+	width:100%;
+	height:25px;
+}
+
+article.post {
+	margin-bottom:30px;
+	display:block;
+	clear:both;
+
+	.post-header {
+		display:inline;
+		margin-bottom: 1em;
+
+		.post-title {
+			margin-bottom: 10px;
+			a {
+				color: @rha-green;
+				font-size:24px;
+				font-weight:400;
+				line-height:1.2;
+			}
+		}
+
+		.post-timestamp a {
+			color: #9a9;
+			font-size:12px;
+			float:right;
+			line-height:30px;
+			text-transform:uppercase;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.post-content {
+		display: inline;
+		font-size: 13px;
+		line-height: 1.5;
+
+		.post-left {
+			width:15%;
+			float:left;
+
+			.thumb {
+				width: 75px;
+				height: 75px;
+			}
+		}
+
+		.post-right {
+			min-height:75px;
+			padding-left:100px;
+			padding-bottom:8px;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.post-footer {
+		clear:both;
+		border-top:1px dotted #ddd;
+		border-bottom:1px dotted #ddd;
+		padding:5px 0px;
+
+		.more {
+			font-weight:bold;
+			font-size:14px;
+			text-transform:uppercase;
+			color:@rha-green;
+		}
+	}
+}
+
+#side-banner {
+	width:100%;
+	padding-top:10px;
+
+	.tagline {
+		border-top:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+	}
+
+	h3 {
+		color: #1A493E;
+		font-size:18px;
+		font-weight:400;
+		margin: 5px auto 5px 20px;
+		text-transform:uppercase;
+	}
+
+	#social-badges {
+		text-align:center;
+		height:64px;
+		margin-top:-30px;
+
+		a {
+			height:64px;
+			width:64px;
+
+			.preload {
+				.transition;
+				.transform(0deg, 1, 10deg, 0px);
+			}
+
+			img {
+				.transition;
+				
+				&:hover {
+					.transform(-10deg, 1, 0deg, 0);
+				}
+			}
+		}
+	}
+
+	#showtimes {
+		font-size:14px;
+		padding:10px;
+		color:#888;
+
+		.ch-head {
+			text-align:center;
+			text-transform:uppercase;
+			color:#1a493e;
+			margin:0 auto;
+			width:100%;
+			float:left;
+			line-height:2;
+		}
+
+		#ch-12 {
+			margin-top:10px;
+		}
+
+		td {
+			padding:4px;
+		}
+
+		.now-playing {
+			color:#222;
+			font-weight:bold;
+		}
+
+		.st-left {
+			text-align:right;
+		}
+
+		.st-right {
+			text-align:left;
+		}
+	}
+}
+
+#footer {
+	position:relative;
+
+	margin-top:-210px;
+	height:210px;
+	clear:both;
+
+	background-color:#333;
+
+	.top {
+		height:35px;
+		background-color:#2c2c2c;
+		margin-bottom:10px;
+	}
+
+	ul {
+		list-style:none;
+		padding:0 0 0 10px;
+		border-left: 2px solid #2c2c2c;
+		margin-left: 5px;
+		color: #aaa;
+
+		li a {
+			color: #aaa;
+
+			&:hover {
+				color: #ddd;
+			}
+		}
+	}
+
+	header h2 {
+		cursor:default;
+		text-transform:uppercase;
+		font-size:18px;
+		color:#aaa;
+		font-weight:400;
+		line-height:24px;
+	}
+
+	#site-map,
+	#links,
+	#opportunities,
+	#contact-us {
+		float:left;
+		width:25%; /* 1/(number of cols) */
+	}
+}
+
+/**********************************************************
+* MISC
+**********************************************************
+* Executive board
+*********************************************************/
+.exec {
+	width:100%;
+	display:inline-block;
+	margin-bottom:5px;
+
+	.portrait {
+		padding: 8px;
+		width:144px;
+		box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+		border-radius: 2px;
+		float:left;
+	}
+	.info {
+		padding:10px;
+		float:left;
+		width:60%;
+	}
+	img {
+		width:144px;
+	}
+
+	.name {
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+
+	.email {
+		margin-bottom: 10px;
+	}
+}
+
+h4.search-results {
+	margin-bottom: 10px;
+	font-weight:700;
+}
